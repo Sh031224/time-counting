@@ -1,0 +1,29 @@
+{
+  "name": "time-counting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sh031224/time-counting.git"
+  },
+  "author": "Sh031224 <1cktmdgh2@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sh031224/time-counting/issues"
+  },
+  "homepage": "https://github.com/Sh031224/time-counting#readme",
+  "devDependencies": {
+    "@types/pluralize": "0.0.29",
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "pluralize": "^8.0.0"
+  }
+}
