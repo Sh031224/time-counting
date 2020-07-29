@@ -82,4 +82,71 @@ describe("#Time Counting test Korean", () => {
       TimeCounting("2020-08-10", { lang: "ko", objectTime: day })
     ).to.equal(result);
   });
+  it("time counting ko 1hour", () => {
+    const day = new Date("2020-08-10 08:00:00");
+    const result = "1 시간 전";
+    expect(
+      TimeCounting("2020-08-10 07:00:00", {
+        lang: "ko",
+        objectTime: day
+      })
+    ).to.equal(result);
+  });
+
+  it("time counting ko 1hour after", () => {
+    const day = new Date("2020-08-10 07:00:00");
+    const result = "1 시간 후";
+    expect(
+      TimeCounting("2020-08-10 08:00:00", {
+        lang: "ko",
+        objectTime: day
+      })
+    ).to.equal(result);
+  });
+
+  it("time counting ko 2hours after", () => {
+    const day = new Date("2020-08-10 06:00:00");
+    const result = "2 시간 후";
+    expect(
+      TimeCounting("2020-08-10 08:00:00", {
+        lang: "ko",
+        objectTime: day
+      })
+    ).to.equal(result);
+  });
+
+  it("time counting ko just now 1 hour", () => {
+    const day = new Date("2020-08-10 06:00:00");
+    const result = "방금 전";
+    expect(
+      TimeCounting("2020-08-10 05:00:00", {
+        lang: "ko",
+        objectTime: day,
+        calculate: { justNow: 60 * 60 + 1 }
+      })
+    ).to.equal(result);
+  });
+
+  it("time counting ko just now 2 hours ago", () => {
+    const day = new Date("2020-08-10 07:00:00");
+    const result = "2 시간 전";
+    expect(
+      TimeCounting("2020-08-10 05:00:00", {
+        lang: "ko",
+        objectTime: day,
+        calculate: { justNow: 60 * 60 + 1 }
+      })
+    ).to.equal(result);
+  });
+
+  it("time counting ko just now 2 months ago", () => {
+    const day = new Date("2020-06-10");
+    const result = "2 개월 전";
+    expect(
+      TimeCounting("2020-04-10", {
+        lang: "ko",
+        objectTime: day
+      })
+    ).to.equal(result);
+  });
 });
