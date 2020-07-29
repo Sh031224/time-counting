@@ -12,7 +12,7 @@
     "url": "git+https://github.com/Sh031224/time-counting.git"
   },
   "author": "Sh031224 <1cktmdgh2@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [
     "time",
     "calculate",
