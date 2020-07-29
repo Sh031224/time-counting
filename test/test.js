@@ -1,26 +1,85 @@
 "use strict";
 const expect = require("chai").expect;
-const index = require("../dist/index.js");
+const TimeCounting = require("../dist/index").default;
 
-describe("getPlural function test", () => {
-  it("should return Boys", () => {
-    const result = index.getPlural("Boy");
-    expect(result).to.equal("Boys");
+describe("#Time Counting test English", () => {
+  it("time counting", () => {
+    const day = new Date("2020-08-10");
+    const result = "just now";
+    expect(TimeCounting("2020-08-10", { objectTime: day })).to.equal(result);
   });
-  it("should return Girls", () => {
-    const result = index.getPlural("Girl");
-    expect(result).to.equal("Girls");
+
+  it("time counting en", () => {
+    const day = new Date("2020-08-10");
+    const result = "just now";
+    expect(
+      TimeCounting("2020-08-10", { lang: "en", objectTime: day })
+    ).to.equal(result);
   });
-  it("should return Geese", () => {
-    const result = index.getPlural("Goose");
-    expect(result).to.equal("Geese");
+
+  it("time counting 1hour", () => {
+    const day = new Date("2020-08-10 08:00:00");
+    const result = "1 hour ago";
+    expect(TimeCounting("2020-08-10 07:00:00", { objectTime: day })).to.equal(
+      result
+    );
   });
-  it("should return Toys", () => {
-    const result = index.getPlural("Toy");
-    expect(result).to.equal("Toys");
+
+  it("time counting 1hour after", () => {
+    const day = new Date("2020-08-10 07:00:00");
+    const result = "1 hour after";
+    expect(TimeCounting("2020-08-10 08:00:00", { objectTime: day })).to.equal(
+      result
+    );
   });
-  it("should return Men", () => {
-    const result = index.getPlural("Man");
-    expect(result).to.equal("Men");
+
+  it("time counting 2hours after", () => {
+    const day = new Date("2020-08-10 06:00:00");
+    const result = "2 hours after";
+    expect(TimeCounting("2020-08-10 08:00:00", { objectTime: day })).to.equal(
+      result
+    );
+  });
+
+  it("time counting just now 1 hour", () => {
+    const day = new Date("2020-08-10 06:00:00");
+    const result = "just now";
+    expect(
+      TimeCounting("2020-08-10 05:00:00", {
+        objectTime: day,
+        calculate: { justNow: 60 * 60 + 1 }
+      })
+    ).to.equal(result);
+  });
+
+  it("time counting just now 2 hours ago", () => {
+    const day = new Date("2020-08-10 07:00:00");
+    const result = "2 hours ago";
+    expect(
+      TimeCounting("2020-08-10 05:00:00", {
+        objectTime: day,
+        calculate: { justNow: 60 * 60 + 1 }
+      })
+    ).to.equal(result);
+  });
+
+  it("time counting just now 2 months ago", () => {
+    const day = new Date("2020-06-10");
+    const result = "2 months ago";
+    expect(
+      TimeCounting("2020-04-10", {
+        objectTime: day
+      })
+    ).to.equal(result);
+  });
+});
+
+describe("#Time Counting test Korean", () => {
+  it("time counting ko", () => {
+    const day = new Date("2020-08-10");
+    const result = "방금 전";
+    expect(
+      TimeCounting("2020-08-10", { lang: "ko", objectTime: day })
+    ).to.equal(result);
   });
 });
