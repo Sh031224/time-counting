@@ -96,7 +96,7 @@ const option = {
 console.log(TimeCounting("2020-08-10 05:00:00", option));
 ```
 
-```console
+```sh
 just now
 ```
 

@@ -23,8 +23,6 @@ npm
 $ npm install time-counting --save
 ```
 
-yarn
-
 ```sh
 $ yarn add time-counting
 ```
@@ -106,7 +104,7 @@ const option = {
 console.log(TimeCounting("2020-08-10 05:00:00", option));
 ```
 
-```console
+```sh
 방금 전
 ```
 
