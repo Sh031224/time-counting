@@ -13,6 +13,13 @@
   },
   "author": "Sh031224 <1cktmdgh2@gmail.com>",
   "license": "ISC",
+  "keywords": [
+    "time",
+    "calculate",
+    "time-counting",
+    "time counting",
+    "calculate time"
+  ],
   "bugs": {
     "url": "https://github.com/Sh031224/time-counting/issues"
   },
