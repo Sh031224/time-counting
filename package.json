@@ -1,7 +1,7 @@
 {
   "name": "time-counting",
   "version": "1.0.0",
-  "description": "",
+  "description": "You can see how long ago or how long since today.",
   "main": "src/index.js",
   "scripts": {
     "build": "tsc",
