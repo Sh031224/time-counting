@@ -1,5 +1,6 @@
 # time-counting
 
+[![Travis ci](https://travis-ci.org/Sh031224/time-counting.svg?branch=master)](https://travis-ci.org/github/Sh031224/time-counting)
 [![Github issues](https://img.shields.io/github/issues/Sh031224/time-counting)](https://github.com/Sh031224/time-counting/)
 [![Github forks](https://img.shields.io/github/forks/Sh031224/time-counting)](https://github.com/Sh031224/time-counting/)
 [![Githug stars](https://img.shields.io/github/stars/Sh031224/time-counting)](https://github.com/Sh031224/time-counting/)
