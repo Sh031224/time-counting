@@ -4,8 +4,10 @@
   "description": "You can see how long ago or how long since today.",
   "main": "src/index.js",
   "scripts": {
-    "build": "tsc",
-    "test": "mocha --reporter spec"
+    "build": "tsc && npm run copypackage",
+    "test": "mocha --reporter spec",
+    "copypackage": "cp -rf package.json dist",
+    "publish": "cd dist && npm publish"
   },
   "repository": {
     "type": "git",
