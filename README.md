@@ -30,25 +30,28 @@ $ yarn add mypluralize
 // es5
 const TimeCounting = require("time-counting");
 const time = TimeCounting("2020-08-10");
+const timecount = TimeCounting("2020-08-10 08:00:00", { objectTime: "2020-08-10 10:00:00" });
 
 //es6
 import TimeCounting from "time-counting";
 console.log(TimeCounting("2020-08-10"));
+console.log(TimeCounting("2020-08-10 08:00:00", { objectTime: "2020-08-10 10:00:00" }));
 ```
 
 ```sh
 Output should be how long it is and how much is left from the current time.
+2 hours ago
 ```
 
 ### TypeScript
 
 ```typescript
 import TimeCounting from "time-counting";
-console.log(TimeCounting("2020-08-10"));
+console.log(TimeCounting("2020-08-10", { objectTime: "2020-08-11" }));
 ```
 
 ```sh
-Output should be how long it is and how much is left from the current time.
+1 day ago
 ```
 
 ## Options
