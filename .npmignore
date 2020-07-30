@@ -16,3 +16,7 @@ Gruntfile.js
 karma.conf.js
 webpack.*.js
 sauce_connect.log
+src/
+.travis.yml
+package-lock.json
+tsconfig.json

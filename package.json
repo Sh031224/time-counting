@@ -2,12 +2,11 @@
   "name": "time-counting",
   "version": "1.0.0",
   "description": "You can see how long ago or how long since today.",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc && npm run copypackage",
-    "test": "mocha --reporter spec",
-    "copypackage": "cp -rf package.json dist",
-    "publish": "cd dist && npm publish"
+    "test": "mocha --reporter spec"
   },
   "repository": {
     "type": "git",
