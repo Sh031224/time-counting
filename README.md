@@ -45,7 +45,6 @@ console.log(TimeCounting("2020-08-10"));
 console.log(
   TimeCounting("2020-08-10 08:00:00", { objectTime: "2020-08-10 10:00:00" })
 );
-a;
 ```
 
 ```sh

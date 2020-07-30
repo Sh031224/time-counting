@@ -48,7 +48,6 @@ console.log(
     lang: "ko"
   })
 );
-a;
 ```
 
 ```sh
