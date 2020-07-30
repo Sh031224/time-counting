@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc && npm run copypackage",
+    "build": "tsc",
     "test": "mocha --reporter spec"
   },
   "repository": {
