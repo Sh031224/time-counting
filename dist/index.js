@@ -12,7 +12,7 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = (function (time, option) {
-    var date = new Date(time);
+    var date = new Date(time.toString());
     var today = new Date();
     var lang = "en";
     var calculate = {
@@ -37,7 +37,7 @@ exports.default = (function (time, option) {
     };
     if (option) {
         if (option.objectTime) {
-            today = new Date(option.objectTime);
+            today = new Date(option.objectTime.toString());
         }
         if (option.calculate) {
             calculate = __assign(__assign({}, calculate), option.calculate);

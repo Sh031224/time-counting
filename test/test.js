@@ -64,7 +64,7 @@ describe("#Time Counting test English", () => {
   });
 
   it("time counting just now 2 months ago", () => {
-    const day = new Date("2020-06-10");
+    const day = new Date(1591747200000);
     const result = "2 months ago";
     expect(
       TimeCounting("2020-04-10", {

@@ -1,6 +1,6 @@
 {
   "name": "time-counting",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "You can see how long ago or how long since today.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,12 +8,9 @@
     "build": "tsc",
     "test": "mocha --reporter spec"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sh031224/time-counting.git"
+    "url": "https://github.com/Sh031224/time-counting"
   },
   "author": "Sh031224 <1cktmdgh2@gmail.com>",
   "license": "MIT",

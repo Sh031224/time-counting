@@ -15,7 +15,7 @@ interface TimeCountingOption {
 }
 
 export default (time: TimeCountingDate, option?: TimeCountingOption) => {
-  const date = new Date(time);
+  const date = new Date(time.toString());
   let today = new Date();
 
   let lang = "en";
@@ -44,7 +44,7 @@ export default (time: TimeCountingDate, option?: TimeCountingOption) => {
 
   if (option) {
     if (option.objectTime) {
-      today = new Date(option.objectTime);
+      today = new Date(option.objectTime.toString());
     }
     if (option.calculate) {
       calculate = { ...calculate, ...option.calculate };
