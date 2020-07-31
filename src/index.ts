@@ -1,7 +1,7 @@
-type TimeCountingDate = string | number;
+type TimeCountingDate = string | number | Date;
 
 interface TimeCountingOption {
-  objectTime?: string | number;
+  objectTime?: string | number | Date;
   lang?: "ko" | "en";
   calculate?: {
     justNow?: number;
@@ -15,7 +15,7 @@ interface TimeCountingOption {
 }
 
 export default (time: TimeCountingDate, option?: TimeCountingOption) => {
-  const date = new Date(time);
+  const date: Date = new Date(time);
 
   let today = new Date();
 
