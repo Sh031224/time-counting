@@ -27,13 +27,13 @@ exports.default = (function (time, option) {
     var message = {
         justAfter: "just after",
         justNow: "just now",
-        second: "second",
-        minute: "minute",
-        hour: "hour",
-        day: "day",
-        week: "week",
-        month: "month",
-        year: "year"
+        second: " second",
+        minute: " minute",
+        hour: " hour",
+        day: " day",
+        week: " week",
+        month: " month",
+        year: " year"
     };
     if (option) {
         if (option.objectTime) {
