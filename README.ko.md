@@ -72,11 +72,11 @@ console.log(
 
 ## 옵션
 
-|    Name    |     Value      |  default   |                 description                  |
-| :--------: | :------------: | :--------: | :------------------------------------------: |
-| objectTime | string, number | new Date() |           기준이 되는 시간입니다.            |
-|    lang    |   "ko", "en"   |    "en"    |                     언어                     |
-| calculate  |   Calculate    | Calculate  | 해당 값까지 초/분/시간/일 ... 을 출력합니다. |
+|    Name    |        Value         |  default   |                 description                  |
+| :--------: | :------------------: | :--------: | :------------------------------------------: |
+| objectTime | Date, string, number | new Date() |           기준이 되는 시간입니다.            |
+|    lang    |      "ko", "en"      |    "en"    |                     언어                     |
+| calculate  |      Calculate       | Calculate  | 해당 값까지 초/분/시간/일 ... 을 출력합니다. |
 
 ### Calculate
 

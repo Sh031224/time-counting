@@ -65,11 +65,11 @@ console.log(TimeCounting("2020-08-10", { objectTime: "2020-08-11" }));
 
 ## Options
 
-|    Name    |     Value      |  default   |                 description                 |
-| :--------: | :------------: | :--------: | :-----------------------------------------: |
-| objectTime | string, number | new Date() |    It is a standard time for comparison.    |
-|    lang    |   "ko", "en"   |    "en"    |                  language                   |
-| calculate  |   Calculate    | Calculate  | Choose how far you want the time to appear. |
+|    Name    |        Value         |  default   |                 description                 |
+| :--------: | :------------------: | :--------: | :-----------------------------------------: |
+| objectTime | Date, string, number | new Date() |    It is a standard time for comparison.    |
+|    lang    |      "ko", "en"      |    "en"    |                  language                   |
+| calculate  |      Calculate       | Calculate  | Choose how far you want the time to appear. |
 
 ### Calculate
 
