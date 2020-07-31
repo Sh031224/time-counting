@@ -49,7 +49,7 @@ console.log(
 
 ```sh
 Output should be how long it is and how much is left from the current time.
-2hours ago
+2 hours ago
 ```
 
 ### TypeScript
@@ -60,7 +60,7 @@ console.log(TimeCounting("2020-08-10", { objectTime: "2020-08-11" }));
 ```
 
 ```sh
-1day ago
+1 day ago
 ```
 
 ## Options
