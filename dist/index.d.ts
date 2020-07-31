@@ -1,6 +1,6 @@
-declare type TimeCountingDate = Date | number | string;
+declare type TimeCountingDate = string | number;
 interface TimeCountingOption {
-    objectTime?: Date | string | number;
+    objectTime?: string | number;
     lang?: "ko" | "en";
     calculate?: {
         justNow?: number;
