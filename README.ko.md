@@ -54,7 +54,7 @@ console.log(
 오늘을 기준으로 2020년 8월 10일이 며칠 전/후 인지 결과로 나타납니다.
 두 번째 결과는 2020년 8월 10일 10시를 기준으로 2020년 8월 10일 8시의 시간을 확인합니다.
 
-2 시간 전
+2시간 전
 ```
 
 ### TypeScript
@@ -67,16 +67,16 @@ console.log(
 ```
 
 ```sh
-1 일 전
+1일 전
 ```
 
 ## 옵션
 
-|    Name    |        Value         |  default   |                 description                  |
-| :--------: | :------------------: | :--------: | :------------------------------------------: |
-| objectTime | Date, string, number | new Date() |           기준이 되는 시간입니다.            |
-|    lang    |      "ko", "en"      |    "en"    |                     언어                     |
-| calculate  |      Calculate       | Calculate  | 해당 값까지 초/분/시간/일 ... 을 출력합니다. |
+|    Name    |     Value      |  default   |                 description                  |
+| :--------: | :------------: | :--------: | :------------------------------------------: |
+| objectTime | string, number | new Date() |           기준이 되는 시간입니다.            |
+|    lang    |   "ko", "en"   |    "en"    |                     언어                     |
+| calculate  |   Calculate    | Calculate  | 해당 값까지 초/분/시간/일 ... 을 출력합니다. |
 
 ### Calculate
 
