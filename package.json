@@ -27,7 +27,7 @@
   "homepage": "https://github.com/Sh031224/time-counting#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^8.0.1",
+    "mocha": "^8.1.1",
     "typescript": "^3.9.7"
   }
 }
