@@ -5,7 +5,7 @@
 [![Github forks](https://img.shields.io/github/forks/Sh031224/time-counting)](https://github.com/Sh031224/time-counting/)
 [![Githug stars](https://img.shields.io/github/stars/Sh031224/time-counting)](https://github.com/Sh031224/time-counting/)
 [![Github license](https://img.shields.io/github/license/Sh031224/time-counting)](https://github.com/Sh031224/time-counting/)
-[![Package version](https://img.shields.io/github/package-json/v/Sh031224/time-counting)](https://github.com/Sh031224/time-counting)
+[![Package release](https://img.shields.io/github/v/release/Sh031224/time-counting)](https://github.com/Sh031224/time-counting)
 [![Downloads](http://img.shields.io/npm/dm/time-counting.svg?style=flat)](https://www.npmjs.com/package/time-counting)
 [![Npm version](https://img.shields.io/npm/v/time-counting)](https://www.npmjs.com/package/time-counting)
 <br/>
