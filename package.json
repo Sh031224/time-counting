@@ -1,6 +1,6 @@
 {
   "name": "time-counting",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "You can see how long ago or how long since today.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
