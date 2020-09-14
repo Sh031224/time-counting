@@ -7,6 +7,7 @@
 [![Github license](https://img.shields.io/github/license/Sh031224/time-counting)](https://github.com/Sh031224/time-counting/)
 [![Package version](https://img.shields.io/github/package-json/v/Sh031224/time-counting)](https://github.com/Sh031224/time-counting)
 [![Downloads](https://img.shields.io/npm/dy/time-counting)](https://www.npmjs.com/package/time-counting)
+[![Downloads](http://img.shields.io/npm/dm/time-counting.svg?style=flat)](https://www.npmjs.com/package/time-counting)
 [![Npm version](https://img.shields.io/npm/v/time-counting)](https://www.npmjs.com/package/time-counting)
 <br/>
 📦 A package that lets you know how many days before that date.
