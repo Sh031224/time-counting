@@ -58,6 +58,10 @@ exports.default = (function (time, option) {
         }
     }
     var calc = today.valueOf() - date.valueOf();
+    if (59000 >= calc && -59000 <= calc) {
+        var msg = lang === "en" ? "" : " 전";
+        return "" + message.justNow + msg;
+    }
     if (calc < 0) {
         calc *= -1;
         if (calc < calculate.justNow * 1000) {
