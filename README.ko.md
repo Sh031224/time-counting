@@ -6,7 +6,7 @@
 [![Githug stars](https://img.shields.io/github/stars/Sh031224/time-counting)](https://github.com/Sh031224/time-counting/)
 [![Github license](https://img.shields.io/github/license/Sh031224/time-counting)](https://github.com/Sh031224/time-counting/)
 [![Package version](https://img.shields.io/github/package-json/v/Sh031224/time-counting)](https://github.com/Sh031224/time-counting)
-[![Downloads](http://img.shields.io/npm/dm/time-counting.svg?style=flat)](https://www.npmjs.com/package/time-counting)
+[![Downloads](https://img.shields.io/npm/dy/time-counting)](https://www.npmjs.com/package/time-counting)
 [![Npm version](https://img.shields.io/npm/v/time-counting)](https://www.npmjs.com/package/time-counting)
 <br/>
 📦 오늘로부터 해당 날짜가 며칠 전인지, 며칠 후인지 알 수 있도록 해주는 패키지입니다.
