@@ -72,6 +72,16 @@ describe("#Time Counting test English", () => {
       })
     ).to.equal(result);
   });
+
+  it("time counting just now 0.59 sec", () => {
+    const day = new Date("2020-08-10 05:00:00");
+    const result = "just now";
+    expect(
+      TimeCounting("2020-08-10 05:00:59", {
+        objectTime: day
+      })
+    ).to.equal(result);
+  });
 });
 
 describe("#Time Counting test Korean", () => {
@@ -144,6 +154,17 @@ describe("#Time Counting test Korean", () => {
     const result = "2개월 전";
     expect(
       TimeCounting("2020-04-10", {
+        lang: "ko",
+        objectTime: day
+      })
+    ).to.equal(result);
+  });
+
+  it("time counting ko just now 0.59 sec", () => {
+    const day = new Date("2020-08-10 05:00:00");
+    const result = "방금 전";
+    expect(
+      TimeCounting("2020-08-10 05:00:59", {
         lang: "ko",
         objectTime: day
       })
