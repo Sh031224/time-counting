@@ -1,5 +1,5 @@
-declare type TimeCountingDate = string | number | Date;
-interface TimeCountingOption {
+export declare type TimeCountingDate = string | number | Date;
+export interface TimeCountingOption {
     objectTime?: string | number | Date;
     lang?: "ko" | "en";
     calculate?: {
