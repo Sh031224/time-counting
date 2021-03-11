@@ -11,7 +11,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = (function (time, option) {
+var TimeCounting = function (time, option) {
     var date = new Date(time);
     var today = new Date();
     var lang = "en";
@@ -70,65 +70,37 @@ exports.default = (function (time, option) {
         }
         else if (calc < calculate.second * 1000) {
             var time_1 = Math.floor(calc / 1000);
-            var msg = lang === "en" && time_1 > 1
-                ? "s after"
-                : lang === "en"
-                    ? " after"
-                    : " 후";
+            var msg = lang === "en" && time_1 > 1 ? "s after" : lang === "en" ? " after" : " 후";
             return "" + time_1 + message.second + msg;
         }
         else if (calc < 60 * calculate.minute * 1000) {
             var time_2 = Math.floor(calc / 1000 / 60);
-            var msg = lang === "en" && time_2 > 1
-                ? "s after"
-                : lang === "en"
-                    ? " after"
-                    : " 후";
+            var msg = lang === "en" && time_2 > 1 ? "s after" : lang === "en" ? " after" : " 후";
             return "" + time_2 + message.minute + msg;
         }
         else if (calc < 60 * 60 * calculate.hour * 1000) {
             var time_3 = Math.floor(calc / 1000 / 60 / 60);
-            var msg = lang === "en" && time_3 > 1
-                ? "s after"
-                : lang === "en"
-                    ? " after"
-                    : " 후";
+            var msg = lang === "en" && time_3 > 1 ? "s after" : lang === "en" ? " after" : " 후";
             return "" + time_3 + message.hour + msg;
         }
         else if (calc < 60 * 60 * 24 * calculate.day * 1000) {
             var time_4 = Math.floor(calc / 1000 / 60 / 60 / 24);
-            var msg = lang === "en" && time_4 > 1
-                ? "s after"
-                : lang === "en"
-                    ? " after"
-                    : " 후";
+            var msg = lang === "en" && time_4 > 1 ? "s after" : lang === "en" ? " after" : " 후";
             return "" + time_4 + message.day + msg;
         }
         else if (calc < 60 * 60 * 24 * 7 * calculate.week * 1000) {
             var time_5 = Math.floor(calc / 1000 / 60 / 60 / 24 / 7);
-            var msg = lang === "en" && time_5 > 1
-                ? "s after"
-                : lang === "en"
-                    ? " after"
-                    : " 후";
+            var msg = lang === "en" && time_5 > 1 ? "s after" : lang === "en" ? " after" : " 후";
             return "" + time_5 + message.week + msg;
         }
         else if (calc < 60 * 60 * 24 * 7 * 4 * calculate.month * 1000) {
             var time_6 = Math.floor(calc / 1000 / 60 / 60 / 24 / 7 / 4);
-            var msg = lang === "en" && time_6 > 1
-                ? "s after"
-                : lang === "en"
-                    ? " after"
-                    : " 후";
+            var msg = lang === "en" && time_6 > 1 ? "s after" : lang === "en" ? " after" : " 후";
             return "" + time_6 + message.month + msg;
         }
         else {
             var time_7 = Math.floor(calc / 1000 / 60 / 60 / 24 / 7 / 4 / 12);
-            var msg = lang === "en" && time_7 > 1
-                ? "s after"
-                : lang === "en"
-                    ? " after"
-                    : " 후";
+            var msg = lang === "en" && time_7 > 1 ? "s after" : lang === "en" ? " after" : " 후";
             return "" + time_7 + message.year + msg;
         }
     }
@@ -173,4 +145,5 @@ exports.default = (function (time, option) {
             return "" + time_14 + message.year + msg;
         }
     }
-});
+};
+exports.default = TimeCounting;
