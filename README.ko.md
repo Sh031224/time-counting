@@ -2,10 +2,8 @@
 
 [![Travis ci](https://travis-ci.org/Sh031224/time-counting.svg?branch=master)](https://travis-ci.org/github/Sh031224/time-counting)
 [![Github issues](https://img.shields.io/github/issues/Sh031224/time-counting)](https://github.com/Sh031224/time-counting/)
-[![Github forks](https://img.shields.io/github/forks/Sh031224/time-counting)](https://github.com/Sh031224/time-counting/)
 [![Githug stars](https://img.shields.io/github/stars/Sh031224/time-counting)](https://github.com/Sh031224/time-counting/)
 [![Github license](https://img.shields.io/github/license/Sh031224/time-counting)](https://github.com/Sh031224/time-counting/)
-[![Package version](https://img.shields.io/github/package-json/v/Sh031224/time-counting)](https://github.com/Sh031224/time-counting)
 [![Downloads](https://img.shields.io/npm/dy/time-counting)](https://www.npmjs.com/package/time-counting)
 [![Npm version](https://img.shields.io/npm/v/time-counting)](https://www.npmjs.com/package/time-counting)
 <br/>
@@ -61,9 +59,7 @@ console.log(
 
 ```typescript
 import TimeCounting from "time-counting";
-console.log(
-  TimeCounting("2020-08-10", { objectTime: "2020-08-11", lang: "ko" })
-);
+console.log(TimeCounting("2020-08-10", { objectTime: "2020-08-11", lang: "ko" }));
 ```
 
 ```sh
