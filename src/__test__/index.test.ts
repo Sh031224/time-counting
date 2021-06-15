@@ -1,6 +1,6 @@
 "use strict";
 const expect = require("chai").expect;
-const TimeCounting = require("../dist").default;
+import TimeCounting from "../index";
 
 describe("#Time Counting test English", () => {
   it("time counting just after", () => {
