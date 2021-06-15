@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "mocha --experimental-modules test/test.ts"
+    "test": "mocha test/test.ts"
   },
   "repository": {
     "type": "git",
