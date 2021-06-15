@@ -1,11 +1,12 @@
-import { TimeCountingDate, TimeCountingOption } from "./type";
+import generate from "./lib/generate";
+import { TimeCountingDate, TimeCountingOption } from "./types";
 
 const TimeCounting = (time: TimeCountingDate, option?: TimeCountingOption) => {
   const date: Date = new Date(time);
 
   let today = new Date();
 
-  let lang = "en";
+  let lang: "en" | "ko" = "en";
 
   let calculate = {
     justNow: 20,
@@ -51,98 +52,9 @@ const TimeCounting = (time: TimeCountingDate, option?: TimeCountingOption) => {
       };
     }
   }
-  let calc = today.valueOf() - date.valueOf();
+  let calcTime = today.valueOf() - date.valueOf();
 
-  if (59000 >= calc && -59000 <= calc) {
-    const msg = lang === "en" ? "" : " 전";
-
-    return `${message.justNow}${msg}`;
-  }
-
-  if (calc < 0) {
-    calc *= -1;
-    if (calc < calculate.justNow * 1000) {
-      const msg = lang === "en" ? "" : " 후";
-
-      return `${message.justNow}${msg}`;
-    } else if (calc < calculate.second * 1000) {
-      const time = Math.floor(calc / 1000);
-      const msg = lang === "en" && time > 1 ? "s after" : lang === "en" ? " after" : " 후";
-
-      return `${time}${message.second}${msg}`;
-    } else if (calc < 60 * calculate.minute * 1000) {
-      const time = Math.floor(calc / 1000 / 60);
-      const msg = lang === "en" && time > 1 ? "s after" : lang === "en" ? " after" : " 후";
-
-      return `${time}${message.minute}${msg}`;
-    } else if (calc < 60 * 60 * calculate.hour * 1000) {
-      const time = Math.floor(calc / 1000 / 60 / 60);
-      const msg = lang === "en" && time > 1 ? "s after" : lang === "en" ? " after" : " 후";
-
-      return `${time}${message.hour}${msg}`;
-    } else if (calc < 60 * 60 * 24 * calculate.day * 1000) {
-      const time = Math.floor(calc / 1000 / 60 / 60 / 24);
-      const msg = lang === "en" && time > 1 ? "s after" : lang === "en" ? " after" : " 후";
-
-      return `${time}${message.day}${msg}`;
-    } else if (calc < 60 * 60 * 24 * 7 * calculate.week * 1000) {
-      const time = Math.floor(calc / 1000 / 60 / 60 / 24 / 7);
-      const msg = lang === "en" && time > 1 ? "s after" : lang === "en" ? " after" : " 후";
-
-      return `${time}${message.week}${msg}`;
-    } else if (calc < 60 * 60 * 24 * 7 * 4 * calculate.month * 1000) {
-      const time = Math.floor(calc / 1000 / 60 / 60 / 24 / 7 / 4);
-      const msg = lang === "en" && time > 1 ? "s after" : lang === "en" ? " after" : " 후";
-
-      return `${time}${message.month}${msg}`;
-    } else {
-      const time = Math.floor(calc / 1000 / 60 / 60 / 24 / 7 / 4 / 12);
-      const msg = lang === "en" && time > 1 ? "s after" : lang === "en" ? " after" : " 후";
-
-      return `${time}${message.year}${msg}`;
-    }
-  } else {
-    if (calc < calculate.justNow * 1000) {
-      const msg = lang === "en" ? "" : " 전";
-
-      return `${message.justNow}${msg}`;
-    } else if (calc < calculate.second * 1000) {
-      const time = Math.floor(calc / 1000);
-      const msg = lang === "en" && time > 1 ? "s ago" : lang === "en" ? " ago" : " 전";
-
-      return `${time}${message.second}${msg}`;
-    } else if (calc < 60 * calculate.minute * 1000) {
-      const time = Math.floor(calc / 1000 / 60);
-      const msg = lang === "en" && time > 1 ? "s ago" : lang === "en" ? " ago" : " 전";
-
-      return `${time}${message.minute}${msg}`;
-    } else if (calc < 60 * 60 * calculate.hour * 1000) {
-      const time = Math.floor(calc / 1000 / 60 / 60);
-      const msg = lang === "en" && time > 1 ? "s ago" : lang === "en" ? " ago" : " 전";
-
-      return `${time}${message.hour}${msg}`;
-    } else if (calc < 60 * 60 * 24 * calculate.day * 1000) {
-      const time = Math.floor(calc / 1000 / 60 / 60 / 24);
-      const msg = lang === "en" && time > 1 ? "s ago" : lang === "en" ? " ago" : " 전";
-
-      return `${time}${message.day}${msg}`;
-    } else if (calc < 60 * 60 * 24 * 7 * calculate.week * 1000) {
-      const time = Math.floor(calc / 1000 / 60 / 60 / 24 / 7);
-      const msg = lang === "en" && time > 1 ? "s ago" : lang === "en" ? " ago" : " 전";
-
-      return `${time}${message.week}${msg}`;
-    } else if (calc < 60 * 60 * 24 * 7 * 4 * calculate.month * 1000) {
-      const time = Math.floor(calc / 1000 / 60 / 60 / 24 / 7 / 4);
-      const msg = lang === "en" && time > 1 ? "s ago" : lang === "en" ? " ago" : " 전";
-
-      return `${time}${message.month}${msg}`;
-    } else {
-      const time = Math.floor(calc / 1000 / 60 / 60 / 24 / 7 / 4 / 12);
-      const msg = lang === "en" && time > 1 ? "s ago" : lang === "en" ? " ago" : " 전";
-
-      return `${time}${message.year}${msg}`;
-    }
-  }
+  return generate(calcTime, lang, calculate, message);
 };
 
 export default TimeCounting;
