@@ -7,6 +7,4 @@ branches:
 install:
   - npm install
 script:
-  - npm run build
-  - ls
-  - npm run test
+  - npm run build && npm run test
