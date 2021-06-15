@@ -1,42 +1,41 @@
 "use strict";
-const expect = require("chai").expect;
 import TimeCounting from "../index";
 
 describe("#Time Counting test English", () => {
   it("time counting just after", () => {
     const day = new Date("2020-08-10 00:00:00");
     const result = "just after";
-    expect(TimeCounting("2020-08-10 00:00:04", { objectTime: day })).to.equal(result);
+    expect(TimeCounting("2020-08-10 00:00:04", { objectTime: day })).toBe(result);
   });
 
   it("time counting just now", () => {
     const day = new Date("2020-08-10");
     const result = "just now";
-    expect(TimeCounting("2020-08-10", { objectTime: day })).to.equal(result);
+    expect(TimeCounting("2020-08-10", { objectTime: day })).toBe(result);
   });
 
   it("time counting just now day", () => {
     const day = new Date("2020-08-10");
     const result = "just now";
-    expect(TimeCounting("2020-08-10", { lang: "en", objectTime: day })).to.equal(result);
+    expect(TimeCounting("2020-08-10", { lang: "en", objectTime: day })).toBe(result);
   });
 
   it("time counting 1hour", () => {
     const day = new Date("2020-08-10 08:00:00");
     const result = "1 hour ago";
-    expect(TimeCounting("2020-08-10 07:00:00", { objectTime: day })).to.equal(result);
+    expect(TimeCounting("2020-08-10 07:00:00", { objectTime: day })).toBe(result);
   });
 
   it("time counting 1hour after", () => {
     const day = new Date("2020-08-10 07:00:00");
     const result = "1 hour after";
-    expect(TimeCounting("2020-08-10 08:00:00", { objectTime: day })).to.equal(result);
+    expect(TimeCounting("2020-08-10 08:00:00", { objectTime: day })).toBe(result);
   });
 
   it("time counting 2hours after", () => {
     const day = new Date("2020-08-10 06:00:00");
     const result = "2 hours after";
-    expect(TimeCounting("2020-08-10 08:00:00", { objectTime: day })).to.equal(result);
+    expect(TimeCounting("2020-08-10 08:00:00", { objectTime: day })).toBe(result);
   });
 
   it("time counting just now 1 hour", () => {
@@ -47,7 +46,7 @@ describe("#Time Counting test English", () => {
         objectTime: day,
         calculate: { justNow: 60 * 60 + 1 }
       })
-    ).to.equal(result);
+    ).toBe(result);
   });
 
   it("time counting just now 2 hours ago", () => {
@@ -58,7 +57,7 @@ describe("#Time Counting test English", () => {
         objectTime: day,
         calculate: { justNow: 60 * 60 + 1 }
       })
-    ).to.equal(result);
+    ).toBe(result);
   });
 
   it("time counting just now 2 months ago", () => {
@@ -68,7 +67,7 @@ describe("#Time Counting test English", () => {
       TimeCounting("2020-04-10", {
         objectTime: day
       })
-    ).to.equal(result);
+    ).toBe(result);
   });
 
   it("time counting just now 0.59 sec", () => {
@@ -78,7 +77,7 @@ describe("#Time Counting test English", () => {
       TimeCounting("2020-08-10 05:00:00", {
         objectTime: day
       })
-    ).to.equal(result);
+    ).toBe(result);
   });
 });
 
@@ -86,7 +85,7 @@ describe("#Time Counting test Korean", () => {
   it("time counting ko", () => {
     const day = new Date("2020-08-10");
     const result = "방금 전";
-    expect(TimeCounting("2020-08-10", { lang: "ko", objectTime: day })).to.equal(result);
+    expect(TimeCounting("2020-08-10", { lang: "ko", objectTime: day })).toBe(result);
   });
   it("time counting ko 1hour", () => {
     const day = new Date("2020-08-10 08:00:00");
@@ -96,7 +95,7 @@ describe("#Time Counting test Korean", () => {
         lang: "ko",
         objectTime: day
       })
-    ).to.equal(result);
+    ).toBe(result);
   });
 
   it("time counting ko 1hour after", () => {
@@ -107,7 +106,7 @@ describe("#Time Counting test Korean", () => {
         lang: "ko",
         objectTime: day
       })
-    ).to.equal(result);
+    ).toBe(result);
   });
 
   it("time counting ko 2hours after", () => {
@@ -118,7 +117,7 @@ describe("#Time Counting test Korean", () => {
         lang: "ko",
         objectTime: day
       })
-    ).to.equal(result);
+    ).toBe(result);
   });
 
   it("time counting ko just now 1 hour", () => {
@@ -130,7 +129,7 @@ describe("#Time Counting test Korean", () => {
         objectTime: day,
         calculate: { justNow: 60 * 60 + 1 }
       })
-    ).to.equal(result);
+    ).toBe(result);
   });
 
   it("time counting ko just now 2 hours ago", () => {
@@ -142,7 +141,7 @@ describe("#Time Counting test Korean", () => {
         objectTime: day,
         calculate: { justNow: 60 * 60 + 1 }
       })
-    ).to.equal(result);
+    ).toBe(result);
   });
 
   it("time counting ko just now 2 months ago", () => {
@@ -153,7 +152,7 @@ describe("#Time Counting test Korean", () => {
         lang: "ko",
         objectTime: day
       })
-    ).to.equal(result);
+    ).toBe(result);
   });
 
   it("time counting ko just now 0.59 sec", () => {
@@ -164,6 +163,6 @@ describe("#Time Counting test Korean", () => {
         lang: "ko",
         objectTime: day
       })
-    ).to.equal(result);
+    ).toBe(result);
   });
 });

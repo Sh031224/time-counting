@@ -4,9 +4,10 @@
   "description": "You can see how long ago or how long since today.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
-    "build": "tsc",
-    "test": "mocha test/test.ts"
+    "build": "rm -rf dist/ && tsc",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -26,11 +27,19 @@
   },
   "homepage": "https://github.com/Sh031224/time-counting#readme",
   "devDependencies": {
-    "@types/chai": "^4.2.18",
-    "@types/mocha": "^8.2.2",
-    "@types/node": "^15.12.2",
-    "chai": "^4.2.0",
-    "mocha": "^8.1.1",
+    "@types/jest": "^26.0.23",
+    "jest": "^27.0.4",
+    "ts-jest": "^27.0.3",
     "typescript": "^3.9.7"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "transform": {
+      "node_modules/variables/.+\\.(j|t)sx?$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!variables/.*)"
+    ]
   }
 }
